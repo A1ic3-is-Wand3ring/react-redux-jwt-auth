@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Router, Routes, Route, Link, Navigate } from "react-router-dom";
+import { Router, Routes, Route, Link } from "react-router-dom";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,7 +17,9 @@ import BoardAdmin from "./components/board-admin.component";
 import { logout } from "./actions/auth";
 import { clearMessage } from "./actions/message";
 
-import { history } from "./helpers/history";
+//import { useHistory } from "react-router-dom";
+//import { history } from "./helpers/history";
+const history = require("history").createBrowserHistory()
 
 class App extends Component {
   constructor(props) {
