@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Redirect, Navigate , useNavigate} from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -18,7 +18,7 @@ const required = (value) => {
   }
 };
 
-class Login extends Component {
+class Login extends React.Component {
   constructor(props) {
     super(props);
     this.handleLogin = this.handleLogin.bind(this);

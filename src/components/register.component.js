@@ -47,7 +47,7 @@ const vpassword = (value) => {
   }
 };
 
-class Register extends Component {
+class Register extends React.Component {
   constructor(props) {
     super(props);
     this.handleRegister = this.handleRegister.bind(this);

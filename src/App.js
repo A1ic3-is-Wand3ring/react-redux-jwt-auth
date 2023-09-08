@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -61,7 +61,7 @@ class App extends Component {
         <div>
           <nav className="navbar navbar-expand navbar-dark bg-dark">
             <Link to={"/"} className="navbar-brand">
-              bezKoder
+              The Campus Game Jam
             </Link>
             <div className="navbar-nav mr-auto">
               <li className="nav-item">
@@ -126,15 +126,17 @@ class App extends Component {
           </nav>
 
           <div className="container mt-3">
+            <React.Fragment>
             <Routes>
-              <Route exact path={["/", "/home"]} component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/register" component={Register} />
-              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/home" element={<Home />} />
+              <Route exact path="/login" element={<Login/>} />
+              <Route exact path="/register" element={<Register/>} />
+              <Route exact path="/profile" element={<Profile/>} />
               <Route path="/user" component={BoardUser} />
               <Route path="/mod" component={BoardModerator} />
               <Route path="/admin" component={BoardAdmin} />
             </Routes>
+            </React.Fragment>
           </div>
         </div>
       </Router>
