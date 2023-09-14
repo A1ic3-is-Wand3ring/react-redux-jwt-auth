@@ -133,9 +133,9 @@ class App extends Component {
               <Route exact path="/login" element={<Login/>} />
               <Route exact path="/register" element={<Register/>} />
               <Route exact path="/profile" element={<Profile/>} />
-              <Route path="/user" element={BoardUser} />
-              <Route path="/mod" element={BoardModerator} />
-              <Route path="/admin" element={BoardAdmin} />
+              <Route path="/user" component={BoardUser} />
+              <Route path="/mod" component={BoardModerator} />
+              <Route path="/admin" component={BoardAdmin} />
             </Routes>
             </React.Fragment>
           </div>
